@@ -49,7 +49,8 @@ public class SignupPage extends AppCompatActivity {
         signup.setOnClickListener(v -> {
             if(username!=null && email!=null && number!=null && password!=null && confirmPassword!=null){
                 if(password.equals(confirmPassword)){
-
+                    Intent intent = new Intent(SignupPage.this,CardList.class);
+                    startActivity(intent);
                 }else{
                     Toast.makeText(this, "Password and Confirm Passwords don't match !", Toast.LENGTH_SHORT).show();
                 }

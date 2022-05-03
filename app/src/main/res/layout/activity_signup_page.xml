@@ -5,14 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignupPage">
+
     <LinearLayout
         android:id="@+id/btns"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/orgTypeEdt">
 
         <Button
             android:id="@+id/restBtn"
@@ -20,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:layout_weight="1"
+            android:backgroundTint="#5EACEA"
             android:text="Resturant"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="0dp" />
@@ -30,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5sp"
             android:layout_weight="1"
+            android:backgroundTint="#5EACEA"
             android:text="NGO"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="0dp" />
@@ -37,24 +44,29 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/usertype"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="17dp"
-        app:layout_constraintStart_toEndOf="@+id/btns"
+        android:id="@+id/textView3"
+        android:layout_width="134dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Registering as:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/orgTypeEdt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/nameEdt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="96dp"
+    <TextView
+        android:id="@+id/orgTypeEdt"
+        android:layout_width="196dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
+        android:hint="Organisation Type"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -64,10 +76,10 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="organisation name"
+        android:hint="Organisation name"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameEdt" />
+        app:layout_constraintTop_toBottomOf="@+id/btns" />
 
     <EditText
         android:id="@+id/signupEmail"
